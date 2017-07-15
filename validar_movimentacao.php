@@ -38,8 +38,6 @@ function posicao_vazia($origem, $destino, $array)
 	} else {
 		return false;
 	}
-
-	return true;
 }
 
 function posicao_valida($origem, $destino, $array)
@@ -64,6 +62,12 @@ function posicao_valida($origem, $destino, $array)
 	return true;
 }
 
+/**
+ * @param $origem
+ * @param $destino
+ * @param $array
+ * @return bool
+ */
 function movimentacao_diagonal_frente($origem, $destino, $array)
 {
 	if(! posicao_valida($origem, $destino, $array)) {

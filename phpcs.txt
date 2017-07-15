@@ -1,0 +1,1 @@
+ERROR: the "PSR2" coding standard is not installed. The installed coding standards are MySource, PEAR, PHPCS, Squiz and Zend

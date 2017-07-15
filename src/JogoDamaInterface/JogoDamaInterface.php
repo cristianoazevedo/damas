@@ -1,6 +1,6 @@
 <?php
 /**
- * Interface PecaInterface
+ * Interface JogoDamaInterface
  *
  * PHP version 5.6.8
  *
@@ -11,17 +11,17 @@
  * send a note to license@php.net so we can mail you a copy immediately.
  *
  * @category Game
- * @package  Webdev\PecaInterface
+ * @package  Webdev\JogoDamaInterface
  * @author   Cristiano Azevedo <cristianodasilva.azevedo@gmail.com>
  * @author   Márcio Augusto Reis <augustoreis36@gmail.com>
  * @license  http://www.php.net/license/3_01.txt  PHP License 3.01
  * @link     https://www.unicesumar.edu.br/
  */
 
-namespace Webdev\PecaInterface;
+namespace Webdev\JogoDamaInterface;
 
 /**
- * Interface PecaInterface
+ * Interface JogoDamaInterface
  *
  * PHP version 5.6.8
  *
@@ -32,16 +32,55 @@ namespace Webdev\PecaInterface;
  * send a note to license@php.net so we can mail you a copy immediately.
  *
  * @category Game
- * @package  Webdev\PecaInterface
+ * @package  Webdev\JogoDamaInterface
  * @author   Cristiano Azevedo <cristianodasilva.azevedo@gmail.com>
  * @author   Márcio Augusto Reis <augustoreis36@gmail.com>
  * @license  http://www.php.net/license/3_01.txt  PHP License 3.01
  * @link     https://www.unicesumar.edu.br/
  */
-interface PecaInterface
+interface JogoDamaInterface
 {
     /**
-     * @return mixed
+     * @param string $origem
+     * @param string $destino
+     * @param array  $array
+     *
+     * @return boolean
      */
-    public function movimentar();
+    public function validarMovimentacao($origem, $destino, $array);
+
+    /**
+     * @param string $origem
+     * @param string $destino
+     * @param array  $array
+     *
+     * @return boolean
+     */
+    public function posicaoExistente($origem, $destino, $array);
+
+    /**
+     * @param string $origem
+     * @param string $destino
+     * @param array  $array
+     *
+     * @return boolean
+     */
+    public function posicaoVazia($origem, $destino, $array);
+
+    /**
+     * @param string $origem
+     * @param string $destino
+     *
+     * @return boolean
+     */
+    public function posicaoValida($origem, $destino);
+
+    /**
+     * @param string $origem
+     * @param string $destino
+     * @param array  $array
+     *
+     * @return boolean
+     */
+    public function movimentacaoDiagonalFrente($origem, $destino, $array);
 }
